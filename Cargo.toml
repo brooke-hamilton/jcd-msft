@@ -13,4 +13,4 @@ keywords = ["cli", "navigation", "directory", "filesystem", "productivity"]
 categories = ["command-line-utilities", "filesystem"]
 
 [dependencies]
-regex = "1.10"
+regex = "1.11"
