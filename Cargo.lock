@@ -15,8 +15,14 @@ dependencies = [
 name = "jcd"
 version = "0.0.0"
 dependencies = [
+ "logical-path",
  "regex",
 ]
+
+[[package]]
+name = "logical-path"
+version = "0.1.0"
+source = "git+https://github.com/brooke-hamilton/logical-path#37c7aff1938b44481542375e1d529167a0cc1afc"
 
 [[package]]
 name = "memchr"

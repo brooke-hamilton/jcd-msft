@@ -3,10 +3,12 @@
 # Test script to verify symlink handling fix
 echo "=== JCD Symlink Fix Test ==="
 
-# Create test structure
+# Create test structure that mirrors real-world symlink usage
+# (e.g., /workspace -> /mnt/wsl/workspace where the symlink name matches
+# the target's final component)
 TEST_DIR="/tmp/jcd_symlink_test"
-ORIG_DIR="$TEST_DIR/original"
-SYMLINK_DIR="$TEST_DIR/symlink"
+ORIG_DIR="$TEST_DIR/real/workspace"
+SYMLINK_DIR="$TEST_DIR/workspace"
 
 echo "Setting up test environment..."
 rm -rf "$TEST_DIR"
@@ -14,7 +16,7 @@ mkdir -p "$ORIG_DIR/subdir1/nested"
 mkdir -p "$ORIG_DIR/subdir2"
 mkdir -p "$ORIG_DIR/markrussinovich"
 
-# Create symlink
+# Create symlink: /tmp/jcd_symlink_test/workspace -> /tmp/jcd_symlink_test/real/workspace
 ln -sf "$ORIG_DIR" "$SYMLINK_DIR"
 
 JCD_BINARY="/datadrive/jcd/target/release/jcd"

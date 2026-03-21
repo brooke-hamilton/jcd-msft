@@ -13,4 +13,5 @@ keywords = ["cli", "navigation", "directory", "filesystem", "productivity"]
 categories = ["command-line-utilities", "filesystem"]
 
 [dependencies]
+logical-path = { git = "https://github.com/brooke-hamilton/logical-path" }
 regex = "1.10"
